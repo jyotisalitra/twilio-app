@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>TwilioABS</display-name>
+  <servlet>
+		<servlet-name>Twilio</servlet-name>
+		<servlet-class>edu.uta.cse.TwilioServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Twilio</servlet-name>
+		<url-pattern>/twilio</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>TwilioVoice</servlet-name>
+		<servlet-class>edu.uta.cse.TwilioVoiceServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TwilioVoice</servlet-name>
+		<url-pattern>/voice</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>TwilioSMS</servlet-name>
+		<servlet-class>edu.uta.cse.TwilioSMSServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TwilioSMS</servlet-name>
+		<url-pattern>/sms</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>TwilioSMSSender</servlet-name>
+		<servlet-class>edu.uta.cse.TwilioSMSSender</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TwilioSMSSender</servlet-name>
+		<url-pattern>/smsSender</url-pattern>
+	</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+</web-app>
